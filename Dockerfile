@@ -11,7 +11,7 @@ RUN curl -Lo nightscout.tar.gz https://github.com/nightscout/cgm-remote-monitor/
 WORKDIR /opt/nightscout
 
 # Make express.js server listen on all interfaces in case the container has more than one
-RUN sed -i "s/var HOSTNAME = env.HOSTNAME;/var HOSTNAME = '0.0.0.0';/g" server.js
+RUN sed -i "s/var HOSTNAME = env.HOSTNAME;/var HOSTNAME = '0.0.0.0';/g" lib/server/server.js
 
 RUN chown -R node:node /opt/nightscout
 USER node
