@@ -1,6 +1,6 @@
 FROM node:10-buster
 
-ENV NIGHTSCOUT_VERSION=14.0.6
+ENV NIGHTSCOUT_VERSION=14.2.1
 ENV HOSTNAME=0.0.0.0
 
 RUN mkdir -p /opt/nightscout
